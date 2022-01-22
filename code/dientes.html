@@ -1,39 +1,15 @@
 <head th:fragment="head">
-    <meta charset="UTF-8"> 
-    
-    
-      
-    <link rel="stylesheet" href="dientes.css">
-    
-   
-    
+	<meta charset="UTF-8" />
+	<link rel="stylesheet" href="dientes.css" />
 </head>
-<div>
-    <img src="cepillo.png" style="display: none;" id="scream"/>
-    <img src="cloud.png" style="display: none;" id="cloud"/>
-    <img src="restart.png" style="display: none;" id="restart"/>
-    <img src="mancha.png" onclick="one()" style="display: none;"  id="mancha" class="single-img" />
+<div class="container">
+	<div class="game">
+    <img src="mancha.png" class="manchas"/>
+  </div>
 </div>
-
-<h3 style="text-align: center;">Limpiando dientes</h3>
-<div id="container" style="text-align: center;padding-top:25px;">
-    <canvas id="gameCanvas" width="8960px" height="508px" style="border:1px solid #d3d3d3;background: url(backbocan.png); width: 70%; height: 80%;" onclick="playAgain()">
-        Your browser does not support the HTML5 canvas tag.</canvas>
-        
-</div>
-<audio style="display: none;" autoplay="autoplay">
-
-    <source src="3D_Worldrunner_Main.mid" type="audio/mpeg">
-    Your browser does not support the audio element.
-</audio>
-<div style="text-align: center;"><input type="button" value="FullScreen" onclick="fullScreen()"/></div>
+<script src="interactions.js"></script>
 <script>
-
-
-
-
-
-    function copyImageToCanvas(){ 
+	/*function copyImageToCanvas(){ 
       var manchita= document.getElementById("mancha");
       var canvas = document.getElementById("gameCanvas");
 
@@ -44,7 +20,7 @@
       )
 
       ctx.drawImage(
-        manchita,900,140,150,30
+        manchita,2100,140,150,30
       )
       ctx.drawImage(
         manchita,1400,140,150,30
@@ -59,22 +35,22 @@
       )
       
 
-    }
+    }*/
 
-    setTimeout(()=>{
+	/*setTimeout(()=>{
       copyImageToCanvas();
     },300
-    )
+    )*/
 
-    canvas.addEventListener('click', function() {}, false);
+	/*canvas.addEventListener('click', function() {}, false);
     var e = document.getElementById('gameCanvas'),
    elemLeft = e.offsetLeft,
    elemTop = e.offsetTop,
    context = e.getContext('2d'),
-   elements = [];
+   elements = [];*/
 
-// event listener for click event
-e.addEventListener('click', function(event) {
+	// event listener for click event
+	/*e.addEventListener('click', function(event) {
          var xVal = event.pageX - elemLeft,
             yVal = event.pageY - elemTop;
          console.log(xVal, yVal);
@@ -92,10 +68,10 @@ e.addEventListener('click', function(event) {
       }); elements.forEach(function(ele) {
          context.fillStyle = element.colour;
          context.fillRect(ele.left, ele.top, ele.width, ele.height);
-      });
+      });*/
 
-//ya esta 
-/*$(window).load(function(){
+	//ya esta
+	/*$(window).load(function(){
 $(function() {
 $("#gameCanvas").on('click', function() {
   $("#mancha").css("opacity", "0.1");
@@ -104,8 +80,7 @@ $("#gameCanvas").on('click', function() {
 });
 */
 
-
-    /*  function copyImagetoCanvas(){
+	/*  function copyImagetoCanvas(){
       var manchita= document.getElementById("mancha");
       var canvas = document.getElementById("gameCanvas");
 
@@ -137,10 +112,8 @@ $("#gameCanvas").on('click', function() {
       });
 
       */
- //codigo para desaparecer la mancha
- function one() {
-    
-    document.getElementById('mancha').style.opacity = '0';
-}
-
+	//codigo para desaparecer la mancha
+	function one() {
+		document.getElementById("mancha").style.opacity = "0";
+	}
 </script>

@@ -1,11 +1,29 @@
-#gameCanvas { 
-    cursor: url("cepillo.png"), auto;
-    width: 8960px;
-     height:508px;
+body{
+    min-width: 100%;
+    max-width: 100%;
+}
 
+.container {
+    cursor: url("cepillo.png"), auto;
+    min-width: 100%;
+    max-width: 100%;
+}
+
+.game {
+    z-index: -1;
+    width: 80vw;
+    min-height: 90vh;
+    margin: 0 auto;
+    background-image: url("backboca.png");
+    background-size:cover;
  
     
-  }
+}
+
+.manchas {
+    height: 100px;
+    width: 200px;
+}
 
 
  
